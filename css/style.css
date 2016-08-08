@@ -52,4 +52,5 @@ b, strong {
 	border: 0;
 	border-bottom: 2px solid lightgray;
 	border-radius: 0px;
+	max-width: 100%;
 }

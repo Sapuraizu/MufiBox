@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="logo-text"><h1>MufiBox <small id="state">Non connecté</small></h1></div>
 			<div class="form-group">
-				<input id="snd_msg" class="form-control" type="text" placeholder="Saisissez votre message et appuyez sur entrer pour valider"/>
+				<textarea id="snd_msg" class="form-control" type="text" placeholder="Saisissez votre message et appuyez sur entrer pour valider"></textarea>
 				<small class="input-msg">Vous pouvez également <a href="javascript:void(0)" data-type="snd_cmd" data-command="/plant">poser une bombe</a>, défier quelqu'un au /shifumute ou <a href="javascript:void(0)" data-type="snd_cmd" data-command="/help">avoir plus d'informations</a>.</small>
 			</div>
 			<div class="shoutbox-historic">
@@ -53,7 +53,9 @@
 		<script>
 			connectToMufiShout("<?php echo $uid; ?>", "<?php echo $token; ?>", "http://shoutbox.mufibot.net:8080/");
 			function connectToMufiShout(uid, token, url){
-				var shoutbox = io.connect(url);
+				var shoutbox = io.connect(url),
+					isWritingMultipleLines = false;
+
 				shoutbox.on('connect', function(){
 					console.log('%cConnected.', 'color: #16a085');
 				})
@@ -113,12 +115,24 @@
 					$('#historic tbody').prepend(result);
 				}
 
-				$(document).on('keypress', '#snd_msg', function(e){
-					var _this = $(this),
-						message = _this.val();
-					if(e.keyCode == 13){
+				/*
+					KeyCode:
+						Shift: 16
+						Enter: 13
+				*/
+
+				$(document).on('keydown', '#snd_msg', function(e){
+					if(e.keyCode == 16) isWritingMultipleLines = true;
+				})
+
+				$(document).on('keyup', '#snd_msg', function(e){
+					if(!isWritingMultipleLines && e.keyCode == 13){
+						var _this = $(this),
+							message = _this.val();
 						_this.val('');
 						shoutbox.emit('new message', {message: message});
+					} else if(e.keyCode == 16) {
+						isWritingMultipleLines = false;
 					}
 				})
 
