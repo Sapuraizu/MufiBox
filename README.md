@@ -9,6 +9,7 @@ Quelques features de base sont actuellement disponibles, d'autres feront sûreme
 * Ne supprime pas les anciens messages
 * Affichage des messages supprimés
 * Envois de messages + commandes
+* Envois de messages sur plusieurs lignes
 
 #Capture d'écran
 ![Capture d'écran](http://image.prntscr.com/image/1c23412e2c0d4151973da4774441af0c.png "Capture d'écran")
