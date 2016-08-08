@@ -45,6 +45,9 @@ console.log("Votre UID : " + user_uid);
 console.log("Votre TOKEN : " + user_token);
 console.log("Votre LIEN : " + getLink);
 ```
+
+![ConsoleMethod](http://image.prntscr.com/image/267ec9d60db14276b04bbbd2ed2ec0e4.png "UID, TOKEN & Url de connexion")
+
 Il ne vous reste qu'à récupérer le résultat ?uid=UID&token=TOKEN puis le mettre au bout de votre lien localhost (cf. Méthode 1)
 
 /!\ Attention, le Token diffère à chaque nouvelle connexion sur le forum MufiBot, vous devrez recommencer la manip jusqu'à votre prochaine connexion. /!\
