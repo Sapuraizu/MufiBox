@@ -11,7 +11,7 @@ Quelques features de base sont actuellement disponibles, d'autres feront sûreme
 * Envois de messages + commandes
 
 #Capture d'écran
-![Capture d'écran](http://image.prntscr.com/image/1cce24c2fb8f4243b2510bb759ed78bb.png "Capture d'écran")
+![Capture d'écran](http://image.prntscr.com/image/1c23412e2c0d4151973da4774441af0c.png "Capture d'écran")
 
 #Comment l'utiliser ?
 Pour commencer, il vous faudra télécharger ce projet puis le déposer en local dans le dossier www/ de [wamp](http://www.wampserver.com/) (Si c'est ce que vous utilisez).
