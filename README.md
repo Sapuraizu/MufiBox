@@ -33,7 +33,7 @@ Rendez-vous maintenant sur la page MufiBox, et ajoutez ?uid=VOTRE_UID&token=VOTR
 
 Méthode 2:
 Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
-''''
+```
 var scriptContent = $('script[src="http://forum.mufibot.net/jscripts/socketshoutbox.js?ver=1804"]').next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
     step2 = step1.split('(')[1].split(','),
@@ -44,7 +44,7 @@ console.clear();
 console.log("Votre UID : " + user_uid);
 console.log("Votre TOKEN : " + user_token);
 console.log("Votre LIEN : " + getLink);
-''''
+```
 Il ne vous reste qu'à récupérer le résultat ?uid=UID&token=TOKEN puis le mettre au bout de votre lien localhost (cf. Méthode 1)
 
 /!\ Attention, le Token diffère à chaque nouvelle connexion sur le forum MufiBot, vous devrez recommencer la manip jusqu'à votre prochaine connexion. /!\
