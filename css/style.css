@@ -54,3 +54,17 @@ b, strong {
 	border-radius: 0px;
 	max-width: 100%;
 }
+
+span[data-type="talk-to"] {
+	cursor: pointer;
+}
+
+.action-icon {
+	opacity: 0.5;
+	cursor: pointer;
+	transition: opacity 0.1s ease;
+}
+
+.action-icon:hover {
+	opacity: 1;
+}
