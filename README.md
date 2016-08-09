@@ -37,6 +37,13 @@ Rendez-vous maintenant sur la page MufiBox, et ajoutez ?uid=VOTRE_UID&token=VOTR
 ##Méthode 2:
 Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
 ```
+//Ajout de jQuery dans la page
+var jQuery = document.createElement('script');
+jQuery.src = "https://code.jquery.com/jquery-3.1.0.slim.min.js";
+jQuery.type = "text/javascript";
+document.body.appendChild(jQuery);
+
+//Récupération des informations
 var scriptContent = $('script[src="http://forum.mufibot.net/jscripts/socketshoutbox.js?ver=1804"]').next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
     step2 = step1.split('(')[1].split(','),
