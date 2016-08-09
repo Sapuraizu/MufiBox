@@ -41,9 +41,9 @@ Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
 //Récupération des informations
 var scriptContent = $('script[src="http://shoutbox.mufibot.net:8080/socket.io/socket.io.js"]').next().next().next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
-    step2 = step1.split('(')[1].split(','),
-    user_uid = step2[0].replace('"', '').replace('"', '').trim(),
-    user_token = step2[1].replace('"', '').replace('"', '').trim(),
+    step2 = step1.replace(/\"/g, '').split('(')[1].split(','),
+    user_uid = step2[0].trim(),
+    user_token = step2[1].trim(),
     getLink = "?uid="+ user_uid +"&token="+ user_token;
 console.clear();
 console.log("Votre UID : " + user_uid);
