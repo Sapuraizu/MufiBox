@@ -21,6 +21,10 @@
 			<div class="form-group">
 				<textarea id="snd_msg" class="form-control" type="text" placeholder="Saisissez votre message et appuyez sur entrer pour valider"></textarea>
 				<small class="input-msg">Vous pouvez également <a href="javascript:void(0)" data-type="snd_cmd" data-command="/plant">poser une bombe</a>, défier quelqu'un au /shifumute ou <a href="javascript:void(0)" data-type="snd_cmd" data-command="/help">avoir plus d'informations</a>.</small>
+				<small class="pull-right" data-type="toggleSmileys"><a href="javascript:void(0)" data-default-text="(Afficher les smileys)" data-toggle-text="(Masquer les smileys)">(Masquer les smileys)</a></small>
+			</div>
+			<div class="form-group well" id="smileys">
+
 			</div>
 			<div class="shoutbox-historic">
 				<table id="historic" class="table table-hover table-condensed">
