@@ -23,9 +23,7 @@
 				<small class="input-msg">Vous pouvez également <a href="javascript:void(0)" data-type="snd_cmd" data-command="/plant">poser une bombe</a>, défier quelqu'un au /shifumute ou <a href="javascript:void(0)" data-type="snd_cmd" data-command="/help">avoir plus d'informations</a>.</small>
 				<small class="pull-right" data-type="toggleSmileys"><a href="javascript:void(0)" data-default-text="(Afficher les smileys)" data-toggle-text="(Masquer les smileys)">(Masquer les smileys)</a></small>
 			</div>
-			<div class="form-group well" id="smileys">
-
-			</div>
+			<div class="form-group well" id="smileys"></div>
 			<div class="shoutbox-historic">
 				<table id="historic" class="table table-hover table-condensed">
 					<thead>
@@ -59,7 +57,9 @@
 			connectToMufiShout(uid, token, "http://shoutbox.mufibot.net:8080/");
 			function connectToMufiShout(uid, token, url){
 				var shoutbox = io.connect(url),
-					isWritingMultipleLines = false;
+					isWritingMultipleLines = false,
+					windowIsActive = true,
+					unReadMessages = 0;
 
 				shoutbox.on('connect', function(){
 					console.log('%cConnecté au serveur MufiBot.', 'color: #16a085');
@@ -113,8 +113,16 @@
 
 				function showMessage(data){
 					var result = "",
-						prefix = (data.deleted) ? "<span class=\"text-red\">(Supprimé)</span> " : "" || (data.edited) ? "<span class=\"text-red\">(Édité)</span> " : "";
-					result += '<tr class="animated fadeIn" data-mid="'+ data.id +'">';
+						prefix = (data.deleted) ? "<span class=\"text-red\">(Supprimé)</span> " : "" || (data.edited) ? "<span class=\"text-red\">(Édité)</span> " : "",
+						rowColor = "";
+					
+					if(!windowIsActive)
+						document.title = "("+ ++unReadMessages +") - Mufibox";
+
+					if(unReadMessages == 1)
+						rowColor = "bg-gray";
+
+					result += '<tr class="animated fadeIn '+ rowColor +'" data-mid="'+ data.id +'">';
 					//result += '<td>'+ data.id +'</td>';
 					result += '<td><span data-type="talk-to" data-uid="'+ data.user_id +'">@</span>'+ (data.username_link || '<a target="_blank" href="http://forum.mufibot.net/user-8385.html">[BOT] Stéphanie</a>') +'</td>';
 					result += '<td data-id="content">'+ prefix + data.message +'</td>';
@@ -166,6 +174,16 @@
 					var _this = $(this),
 						mid = parseInt(_this.closest('tr').attr('data-mid'));
 					shoutbox.emit('delete message', {id: mid});
+				})
+
+				$(window).on('focus', function(){
+					windowIsActive = true;
+					unReadMessages = 0;
+					document.title = "Mufibox";
+				})
+
+				$(window).on('blur', function(){
+					windowIsActive = false;
 				})
 			}	
 		</script>
