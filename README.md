@@ -36,7 +36,7 @@ Rendez-vous maintenant sur la page MufiBox, et ajoutez ?uid=VOTRE_UID&token=VOTR
 
 ##Méthode 2:
 Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
-```
+```javascript
 //Récupération des informations
 var scriptContent = $('script[src="http://shoutbox.mufibot.net:8080/socket.io/socket.io.js"]').next().next().next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
