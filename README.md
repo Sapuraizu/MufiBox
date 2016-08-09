@@ -37,12 +37,6 @@ Rendez-vous maintenant sur la page MufiBox, et ajoutez ?uid=VOTRE_UID&token=VOTR
 ##Méthode 2:
 Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
 ```
-//Ajout de jQuery dans la page
-var jQuery = document.createElement('script');
-jQuery.src = "https://code.jquery.com/jquery-3.1.0.slim.min.js";
-jQuery.type = "text/javascript";
-document.body.appendChild(jQuery);
-
 //Récupération des informations
 var scriptContent = $('script[src="http://shoutbox.mufibot.net:8080/socket.io/socket.io.js"]').next().next().next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
@@ -55,7 +49,7 @@ console.log("Votre UID : " + user_uid);
 console.log("Votre TOKEN : " + user_token);
 console.log("Votre LIEN : " + getLink);
 ```
-
+(Si vous avez un problème du genre ".next is not a function", raffraîchissez votre page et recommencez.)
 ![ConsoleMethod](http://image.prntscr.com/image/267ec9d60db14276b04bbbd2ed2ec0e4.png "UID, TOKEN & Url de connexion")
 
 Il ne vous reste qu'à récupérer le résultat ?uid=UID&token=TOKEN puis le mettre au bout de votre lien localhost (cf. Méthode 1)
