@@ -12,9 +12,10 @@ Quelques features de base sont actuellement disponibles, d'autres feront sûreme
 * Envois de messages sur plusieurs lignes
 * Affichage de l'heure où le message a été envoyé
 * Suppression de ses propres messages
+* Ajout des smileys
 
 #Capture d'écran
-![Capture d'écran](http://image.prntscr.com/image/eeb129a3c05b4cbcbb48cad17abf6774.png "Capture d'écran")
+![Capture d'écran](http://image.prntscr.com/image/dde2006d83484bceb95eae60c3f3a11f.png "Capture d'écran")
 
 #Comment l'utiliser ?
 Pour commencer, il vous faudra télécharger ce projet puis le déposer en local dans le dossier www/ de [wamp](http://www.wampserver.com/) (Si c'est ce que vous utilisez).
