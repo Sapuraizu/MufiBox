@@ -68,3 +68,8 @@ span[data-type="talk-to"] {
 .action-icon:hover {
 	opacity: 1;
 }
+
+.well {
+	background-color: #bdc3c7 !important;
+	background-image: none !important;
+}
