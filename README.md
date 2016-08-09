@@ -26,7 +26,7 @@ Une fois ça fais, vous devriez pouvoir y acceder depuis [http://localhost/MufiB
 
 Pour remedier à ça, rendez vous sur le [forum MufiBot](http://forum.mufibot.net/), connectez-vous, et utilisez une de ces 2 méthodes.
 
-Méthode 1:
+######Méthode 1:
 Faîtes CTRL + U puis cherchez "socketshoutbox(".
 
 ![SocketShoubox](http://image.prntscr.com/image/0fb45fd2feb246ecbf55be7db981c7b8.png "UID & Token de connexion")
@@ -34,7 +34,7 @@ Faîtes CTRL + U puis cherchez "socketshoutbox(".
 Voilà, vous avez votre UID (ici 8748) et votre TOKEN (ici ded9bfcbbccf1dd74940fc044ec1e99c) qui vous serviront à vous connecter via MufiBox !
 Rendez-vous maintenant sur la page MufiBox, et ajoutez ?uid=VOTRE_UID&token=VOTRE_TOKEN dans le lien ! [http://localhost/MufiBox/?uid=VOTRE_UID&token=VOTRE_TOKEN](http://localhost/MufiBox/?uid=VOTRE_UID&token=VOTRE_TOKEN).
 
-Méthode 2:
+######Méthode 2:
 Ouvrez la console à l'aide de F12, saisissez le code ci-dessous dedans.
 ```
 var scriptContent = $('script[src="http://forum.mufibot.net/jscripts/socketshoutbox.js?ver=1804"]').next().html(),
