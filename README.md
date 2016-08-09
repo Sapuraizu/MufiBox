@@ -1,3 +1,4 @@
+<p align="center"><img src="http://image.prntscr.com/image/ffb89563426c4dbebe869c12985e5378.png" alt="Sapuraizu"/></p>
 # MufiBox
 MufiBox est un outil permettant d'accéder à la shoutbox [MufiBot](http://forum.mufibot.net) sans avoir à ce rendre sur le forum, de plus, elle occupe une grande partie de l'écran et est facilement utilisable.
 
