@@ -44,7 +44,7 @@ jQuery.type = "text/javascript";
 document.body.appendChild(jQuery);
 
 //Récupération des informations
-var scriptContent = $('script[src="http://forum.mufibot.net/jscripts/socketshoutbox.js?ver=1804"]').next().html(),
+var scriptContent = $('script[src="http://shoutbox.mufibot.net:8080/socket.io/socket.io.js"]').next().next().next().html(),
     step1 = scriptContent.substring(scriptContent.indexOf("socketshoutbox("), scriptContent.indexOf(":8080\")")),
     step2 = step1.split('(')[1].split(','),
     user_uid = step2[0].replace('"', '').replace('"', '').trim(),
