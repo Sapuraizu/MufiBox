@@ -4,7 +4,7 @@ MufiBox est un outil permettant d'accéder à la shoutbox [MufiBot](http://forum
 
 Quelques features de base sont actuellement disponibles, d'autres feront sûrement leur apparition avec le temps, à part une ou deux features, toutes les autres sont également disponibles sur le forum officiel.
 
-Version d'essaie disponible : [Cliquez ici](http://mufibox.sapuraizu.netne.net/)
+Version d'essaie disponible : [Cliquez ici](http://sapuraizu.esy.es/mufibox/)
 
 #Features actuelles
 * Connexion à un compte (uid & token)
